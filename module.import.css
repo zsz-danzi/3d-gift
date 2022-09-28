@@ -1,0 +1,54 @@
+/*组件--start*/
+/*横向滚动列表*/
+.mod-scrollList{
+    width: 100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+.mod-scrollList ul{
+    white-space: nowrap;
+    font-size: 0;
+}
+.mod-scrollList .item{
+    display: inline-block;
+    width: 18%;
+    height: 100px;
+    position: relative;
+    margin-left: 12px;
+    /*background-color: #ccc;*/
+}
+.mod-scrollList .item:last-child{margin-right: 12px;}
+.mod-scrollList::-webkit-scrollbar,
+.mod-scrollList ul::-webkit-scrollbar {
+    display: none;
+}
+/*垂直列表*/
+.mod-parallel .img-list{
+    overflow: hidden;
+    padding-top: 8px;
+}
+.mod-parallel .img-list .img-box{
+    height: auto;
+    border: none;
+    width: 50%;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    float: left;
+    margin: 0 0 12px 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mod-parallel .img-list .img-item{
+    display: block;
+    width: 100%;
+    margin: 0;
+    background-position: 50% 50%;
+    background-color: #ebae1f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100%;/*宽高比*/
+    position: relative;
+}
+/*组件--end*/

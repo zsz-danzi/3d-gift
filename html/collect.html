@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-聚合页</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../collect.css">
+    <script type="text/javascript">
+        // html缓存（代价是会自动多刷一次，注意：请直接访问不带参数的URL，如http://xxxxxxx.html）
+        if(!window.location.search) {
+            window.location = window.location.href+'?r='+Math.random();
+        }
+
+        // 根据屏幕大小动态改变font-size 来匹配不同屏幕下的REM
+
+        (function (win,doc){
+            if (!win.addEventListener) return;
+            var html=document.documentElement;
+            function setFont()
+            {
+                var cliWidth=html.clientWidth;
+                html.style.fontSize=100*(cliWidth/750)+'px';
+            }
+            win.addEventListener('resize',setFont,false)
+            setFont()
+        })(window,document);
+    </script>
+</head>
+<body>
+    <div class="collect-box">
+        <img src="../img/collect/bg@2x.png" class="collect-bg" />
+        <div class="info-box">
+            <div class="info-hd">
+                <img src="../img/collect/guan.png" class="info-deco" />
+                <img src="../img/100.png" class="info-avatar" />
+                <p class="info-txt">
+                    <span>Happy Birthday</span>
+                    <span class="info-name">大把影子大大大大啊</span>
+                </p>
+            </div>
+            <div class="info-bd">
+                <p class="main-txt">今日收到<span class="highlight">33</span>份礼物</p>
+                <p class="sub-txt">付费礼物22份，价值220元</p>
+                <p><span class="date">2018 / 09 / 28</span></p>
+            </div>
+        </div>
+        <div class="myGift-list">
+            <div class="list-box">
+                <ul>
+                    <li class="gift-item item-01"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-02"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-03"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-04"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-05"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-06"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-07"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-08"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-09"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-10"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-11"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-12"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-13"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                    <li class="gift-item item-14"><img class="gift-img" src="../img/1-static_pic.png" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="gift-dialog">
+            <div class="share-op">
+                <p class="share-to-txt">-----&nbsp;&nbsp;分享到&nbsp;&nbsp;-----</p>
+                <p>
+                    <a class="btn-share-item share-qq"><i class="ico"></i><span class="txt">QQ</span></a>
+                    <a class="btn-share-item share-qz share-animate"><i class="ico"></i><span class="txt">QQ空间</span></a>
+                    <a class="btn-share-item share-wx"><i class="ico"></i><span class="txt">微信</span></a>
+                    <a class="btn-share-item share-py"><i class="ico"></i><span class="txt">朋友圈</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/zepto-touch.js"></script>
+</body>
+</html>

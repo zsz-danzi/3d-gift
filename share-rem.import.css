@@ -1,0 +1,56 @@
+.feed-img{
+    background-color: #FFBFD9;
+    padding: .2rem;
+}
+.feed-img .cover-box{
+    background-color: #fff;
+    height: 3.6rem;
+    position: relative;
+}
+.feed-img .cover-img{
+    position: absolute;
+    width: 38.5%;
+    right: .1rem;
+    top: 12%;
+}
+.feed-img .cover-img .img-back{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+.feed-img .cover-img .img-front{
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: .3rem;
+    left: 10%;
+}
+.feed-img .cover-info{
+    padding-left: .2rem;
+    position: relative;
+    top: 0.7rem;
+}
+.feed-img  .info-tips{
+    font-size: .26rem;
+    opacity: .7;
+    color: #000000;
+    line-height: .3rem;
+}
+.feed-img  .info-txt{
+    font-size: .6rem;
+    opacity: .7;
+    color: #000000;
+    line-height: .7rem;
+    font-weight: bold;
+    padding: .3rem 0;
+}
+.feed-img  .info-date{
+    font-size: .24rem;
+    opacity: .7;
+    color: #000000;
+    font-weight:bold;
+    line-height: .3rem;
+    margin-top: .6rem;
+}

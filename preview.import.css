@@ -1,0 +1,99 @@
+.page-preview{}
+.page-preview .btn-send {
+    width: 92%;
+    height: 40px;
+    background: #F2C224;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #000000;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -46%;
+}
+.page-preview .fixed-bg {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: 100% auto;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.page-preview .fixed-bg.full{
+    background-size: cover;
+    background-position-x: 50%;
+}
+.page-preview .page-fixed{
+    width: 100%;
+    z-index: 9;
+}
+.page-preview .page-fixed-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+}
+
+/*兑换码*/
+.preview-code{
+    height: 100%;
+    background-color: #f3f5f8;
+}
+.preview-code .page-ft{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    background-color: #f3f5f8;
+}
+.preview-code .page-ft .fixed-btn{
+    position: relative;
+    bottom: auto;
+    margin-bottom: 15px;
+}
+.page-preview .code-box{
+    text-align: center;
+    position: relative;
+    padding: 34px 0;
+    background-color: #f3f5f8;
+}
+.page-preview .code-box .code-input{
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 2px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    width: 53.3333%;
+    font-size: 14px;
+    color: #000000;
+    vertical-align: middle;
+    margin: 0 8px;
+    text-align: center;
+}
+.page-preview .code-box .btn-copy{
+    font-size: 16px;
+    vertical-align: middle;
+    color: #000000;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    background: #F2C224;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/*兑换码不可用*/
+.page-preview .disable .code-input,
+.page-preview .disable .fixed-btn{
+    opacity: .4;
+}
+
+.preview-code .page-ft .txt{
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: #adadad;
+}

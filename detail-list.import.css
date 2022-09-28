@@ -1,0 +1,185 @@
+.page-detail .send-box.sendList-box{
+    width: auto;
+    padding-top: 0!important;
+}
+/*卡片滚动，目前不需要滚动，所以只有一个卡片*/
+.page-detail .sendList-box .mod-scrollList{
+    width: 100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: hidden;
+}
+.page-detail .sendList-box .mod-scrollList{
+    padding: 0 10.8% 30px;
+    box-sizing: border-box;
+}
+.page-detail .sendList-box .mod-scrollList ul{
+    white-space: nowrap;
+    font-size: 0;
+    text-align: center;
+}
+.page-detail .sendList-box .mod-scrollList .item{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-left: 0px;
+    /*padding: 0 15px;*/
+    box-sizing: border-box;
+    /*max-width: 500px;*/
+}
+
+
+.page-detail .sendList-box .mod-scrollList .item:last-child{
+    margin-right: 0px;
+}
+.page-detail .sendList-box .mod-scrollList::-webkit-scrollbar,
+.page-detail .sendList-box .mod-scrollList ul::-webkit-scrollbar {
+    display: none;
+}
+/*新增向右滚动订单和豪华黄钻的订单add by colorcai 2017/10/30*/
+.page-detail .sendList-box .mod-scrollList.scroll{
+    padding-left: 10.8%;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+.page-detail .sendList-box .mod-scrollList.scroll .item{
+    padding: 0 5.1% 0 0;
+    width: 91.2%;
+    vertical-align: top;
+    /*margin-bottom: 30px;*/
+}
+.page-detail .sendList-box .mod-scrollList.scroll .item:nth-last-child(1){
+    margin-right: 6.7%;
+}
+.page-detail .sendList-box .mod-scrollList.scroll .item:before{
+    content: '';
+    position: absolute;
+    width: 309px;
+    height: 71px;
+    bottom:-33px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -2.55%;
+    background-size: cover;
+    background-image: url(img/blur@2x.png);
+}
+
+.page-detail .sendList-box .detail-sendBox,
+.page-detail .sendList-box .detail-getBox{
+    overflow: hidden;
+}
+.page-detail .sendList-box .gift-box{
+    position: relative;
+    padding-top: 47px;
+}
+.page-detail .sendList-box .gift-box:before{
+    content: '';
+    width: 242px;
+    height: 176px;
+    background-image: url(img/list-bg@2x.png);
+    background-size: cover;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -121px;
+    top:23px;
+}
+.page-detail .sendList-box .gift-info{
+    position: relative;
+    background-color: #fff;
+    margin-top: 11%;
+}
+.page-detail .sendList-box .gift-info:before{
+    content: '';
+    width: 100%;
+    display: block;
+    padding-top: 8.62%;
+    background-size: cover;
+    background-image: url(img/wave@2x.png);
+    position: absolute;
+    transform: translateY(-100%);
+    top:1px;
+}
+
+
+.page-detail .sendList-box .op-sendBox{
+    width: 76.7%;
+    margin: 0 auto;
+    color: #5A6373;
+    padding-top: 0;
+    margin-top: -7px;
+}
+.page-detail .sendList-box .op-sendBox .ico-select{
+    background-image: url(img/slice/no-select-grey@2x.png);
+}
+.page-detail .sendList-box .op-sendBox .ico-select.select{
+    background-image: url(img/slice/select@2x.png);
+}
+.page-detail .sendList-box .op-sendBox .ico-star{
+    background-image: url(img/slice/star-yellow@2x.png);
+}
+
+.page-detail .top-tips{
+    line-height: 28px;
+    height: 28px;
+    font-size: 12px;
+    color: #5A6373;
+    position: relative;
+    z-index:2;
+    text-align: center;
+    padding: 5px 0 3px 0;
+}
+.page-detail .top-title{
+    font-size: 12px;
+    color: #5A6373;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    line-height: 16px;
+    padding: 10px 5px 5px;
+    background-color: #fff;
+    border-bottom:1px solid rgba(0,0,0,.17)
+}
+.page-detail .top-title .highlight{
+    color: #ff4b18;
+}
+.page-detail .top-title .name{
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    padding: 0 3px;
+}
+.page-detail .top-tips .ico-gift{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-size: cover;
+    background-image: url(img/slice/gift-s@2x.png);
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin: 0 5px;
+}
+.page-detail .top-tips .ico-arrow{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    background-image: url(img/slice/arrow-grey@2x.png);
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+/*js操作滚动*/
+.page-detail .sendList-box .mod-scrollList.transform{
+    overflow: visible;
+    transition: all .5s;
+}

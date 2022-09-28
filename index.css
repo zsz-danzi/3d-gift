@@ -1,0 +1,79 @@
+/*
+ * 新版礼物商城
+ * author : colorcai
+ */
+
+@import "reset.import.css";
+@import "frame.import.css";/*框架*/
+@import "module.import.css";/*组件*/
+@import "qui-list.import.css";/*qui的列表组件*/
+@import "g-retina-line.css";/*1px线*/
+@import "home.import.css";/*首页*/
+@import "paper.import.css";/*选择包装纸*/
+@import "history.import.css";/*历史记录*/
+@import "detail-send.import.css";/*送礼详情页*/
+@import "detail-get.import.css";/*收礼详情页*/
+@import "detail-list.import.css";/*一声问候页*/
+@import "pop.import.css";/*送礼动画浮层页*/
+@import "preview.import.css";/*装扮预览页面*/
+@import "dialog.import.css";/*弹层一些公用样式*/
+@import "share.import.css";/*截图分享页面*/
+@import "share-rem.import.css";/*截图分享页面 rem*/
+@import "share-static.import.css";/*截图分享页面静态图 rem*/
+@import "share-dynamic.import.css";/*截图分享页面动态图 rem*/
+@import "fixBar.import.css";/*h5顶部替换原生顶部的*/
+@import "animate.import.css";/*动画样式*/
+@import "loading.import.css";/*动画样式*/
+@import "media.import.css";/*媒体查询*/
+
+
+/*显示头部的逻辑很复杂*/
+.show-topBar{
+    /*padding-top: 65px;*/
+    padding-top: 56px;
+    box-sizing: border-box;
+}
+.show-topBar .top-bar{
+    display: block;
+}
+/*送礼 收礼*/
+.show-topBar .page-detail{
+    /*margin-top: -65px;*/
+    margin-top: -56px;
+}
+/*收礼*/
+.show-topBar .get-box{
+    padding-top: 45%;
+}
+/*一声问候*/
+.show-topBar .page-detail.one-greet{
+    /*margin-top: 0;*/
+    margin-top: 30px;
+}
+/*预览装扮*/
+.show-topBar .page-preview .fixed-bg{
+    /*background-position-y:65px;*/
+    background-position-y:56px;
+}
+/*包装纸页面*/
+.show-topBar .page-paper .page-hd .page-box{
+    padding-top: 0;
+}
+/*历史记录页面*/
+.show-topBar .page-history .cat-tabBox{
+    padding-top: 0;
+}
+.page-history .page-bd{
+    padding-top: 56px;
+}
+.show-topBar .page-history .page-bd{
+    padding-top: 40px;
+}
+
+/*一声问候异化*/
+.page-content.one-greet .page-bd {
+    padding: 20px 0 40px
+}
+
+
+

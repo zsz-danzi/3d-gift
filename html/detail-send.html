@@ -1,0 +1,110 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-详情页</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+
+</head>
+<body class="flex-layout show-topBar gifts-detail">
+    <style>
+        /*动态礼物*/
+        @-webkit-keyframes animate-gift {
+            0% {background-position: 0 0;}
+            100% {background-position: -3000px 0;}/*(n-1)乘于（1倍宽度 200）*/
+        }
+        .page-detail .gift-img .img{/*播放时间是帧数n除于10，一秒10帧*/
+            -webkit-animation: animate-gift 1.6s steps(15, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+            animation: animate-gift 1.6s steps(15, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+            background-image: url(../img/gift-multi@2x.png);
+        }
+    </style>
+    <div class="container">
+        <div class="page-content page-detail">
+            <div class="page-fixed-bg">
+                <div class="fixed-bg" style="background-image: url(../img/bg.png)"></div>
+            </div>
+            <div class="page-fixed">
+                <div class="top-bar ">
+                    <div class="top-bar-box">
+                        <button class="btn-back">返回</button>
+                        <p class="bar-title">礼物商城</p>
+                        <!--<button class="btn-mine">我的</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="page-hd">
+                <div class="bg-deco"></div>
+                <div class="send-box">
+                    <div class="detail-sendBox">
+                        <img src="../img/level/bor@2x.png" class="cor-img-l-t" /><!--左上-->
+                        <img src="../img/level/bor@2x.png" class="cor-img-r-t" /><!--右上-->
+                        <img src="../img/level/bor@2x.png" class="cor-img-l-b" /><!--左下-->
+                        <img src="../img/level/bor@2x.png" class="cor-img-r-b" /><!--右下-->
+                        <i class="icon-book"></i>
+                        <div class="avatar-box">
+                            <!--<img class="avatar" src="../img/100.png" />-->
+                            <img class="avatar" src="../img/add@2x.png" />
+                            <p class="name">TO:小王子</p>
+                            <p class="date">2018.01.01<i class="ico-arrow"></i></p>
+                        </div>
+                        <div class="gift-box">
+                            <!--<img class="gift-img" src="../img/gift.png" />-->
+                            <div class="gift-img"><div class="img"></div></div>
+                            <div class="gift-info">
+                                <p class="gift-tips">枕头大战<img class="img-level" src="../img/level/level-low-s@2x.png" /><img class="img-level" src="../img/level/level-mid-s@2x.png" /><img class="img-level" src="../img/level/level-high-s@2x.png" /></p>
+                                <p class="gift-tips">对方收到后获得<span class="highlight">7天豪华黄钻</span><i class="ico-arrow"></i></p>
+                                <div class="gift-words">
+                                    <div class="select-box">
+                                        <select class="input-select">
+                                            <option>第一天</option>
+                                            <option>第二天</option>
+                                        </select>
+                                    </div>
+                                    <textarea class="input-box text-indent">愿你有自持而节制的华丽，永远虔诚的天真——生日快乐哦～</textarea>
+                                    <div class="input-box" contenteditable style="display: none;" >
+                                        <!--<textarea class="input-area">-->
+                                        愿你有自持而节制的华丽，永远虔诚的天真——生日快乐哦～
+                                        <!--</textarea>-->
+                                    </div>
+                                    <p class="lines"></p>
+                                    <p class="lines"></p>
+                                    <p class="lines"></p>
+                                    <p class="lines"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-box">
+                            <button class="btn-ask border">索要</button>包装 <span>5<i class="ico-star"></i></span><i class="ico-gift"></i><i class="ico-gift-grey"></i>
+                            <i class="pop-tips"></i>
+                        </div>
+                    </div>
+                    <div class="op-sendBox">
+                        <span class="total-price">总价: 15<i class="ico-star"></i></span>
+                        <span class="noName-box"><i class="ico-vip" style="display: none;"></i><i class="ico-svip"></i>匿名赠送<i class="ico-select select"></i><i class="ico-select"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-ft">
+                <button class="fixed-btn btn-send">赠送</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/zepto-touch.js"></script>
+<script>
+    $(function(){
+        setTimeout(function(){
+            $('.pop-tips').addClass('show')
+        },500)
+    })
+</script>
+</body>
+</html>

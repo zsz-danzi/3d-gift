@@ -1,0 +1,143 @@
+/*顶部导航*/
+/*分类tab*/
+.cat-tabBox{
+    /*padding-top: 24px;*/
+    padding-top: 15px;
+    background-color: #fff;
+    color: #000;
+    font-size: 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.17);
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.cat-tabBox .cat-tab{
+    display: table-row;
+}
+.cat-tabBox .tab-item{
+    display: table-cell;
+    font-size: 16px;
+
+    display: inline-block;
+    width: 35%;
+}
+.cat-tabBox .tab-item .txt{
+    padding: 8px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    color:  #000;
+    line-height: 22px;
+    top:1px;
+}
+.cat-tabBox .tab-item.cur .txt{
+    color: #2E68AF;
+    border-bottom: 2px solid #2E68AF;
+}
+
+.page-history{}
+.page-history .page-fixed .btn-back{
+    position: absolute;
+    font-size: 0;
+    display: block;
+    background-size: 100% 100%;
+    background-image: url(img/slice/back-dark@2x.png);
+    left: 8px;
+    bottom: 15px;
+    width: 12px;
+    height: 20px;
+}
+.page-history .history-date{
+    height: 40px;
+    line-height: 40px;
+    background: #F3F5F8;
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+}
+/*历史列表异化*/
+.page-history .qui-list .qui-list-info{
+    padding: 10px 0;
+}
+.page-history .qui-list .avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    background-size: cover;
+}
+.page-history .qui-list:after{
+    margin-left: 82px;
+    border-bottom: 1px solid rgba(0,0,0,.17);
+}
+.page-history .qui-list .nickname{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 2px;
+    max-width: 58%;
+}
+.page-history .qui-list .sub-info{
+    font-size: 12px;
+    line-height: 20px;
+    color: #5A6373;
+    opacity: .6;
+    max-width: 58%;
+}
+.page-history .qui-list .qui-list-op{
+    right: 12px;
+}
+.page-history .qui-btn{
+    font-size: 12px;
+    color: #5A6373;
+}
+.page-history .highlight{
+    color: #2E68AF;
+}
+.page-history .history-box .qui-list:nth-last-of-type(1):after{
+    border-color: transparent;
+}
+.page-history .info-price{
+    font-size: 16px;
+    color: #000;
+}
+.page-history .info-price .ico-rmb{
+    font-size: 13px;
+    padding-left: 2px;
+}
+.page-history .info-price .ico-star{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-size: cover;
+    margin-left: 5px;
+    background-image: url(img/slice/star-yellow@2x.png);
+    vertical-align: text-bottom;
+    position: relative;
+    top: -2px;
+}
+
+.page-history .none-history{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:50%;
+    transform: translateY(-60%);
+    font-size: 15px;
+    color: #000000;
+    line-height: 21px;
+    font-weight: bold;
+}
+.page-history .none-history .grey{
+    font-size: 13px;
+    color: #5A6373;
+    line-height: 18px;
+    padding: 2px;
+    font-weight: normal;
+    opacity: .5;
+}
+.page-history .none-history .none-img{
+    width: 150px;
+    margin: 16px auto;
+    display: block;
+}

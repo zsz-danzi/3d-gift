@@ -1,0 +1,10 @@
+/*
+ * 新版礼物商城
+ * author : colorcai
+ */
+
+@import "reset.import.css";
+@import "share-rem.import.css";/*截图分享页面 rem*/
+@import "share-rem-static.import.css";/*截图分享页面静态图 rem*/
+@import "share-rem-dynamic.import.css";/*截图分享页面动态图 rem*/
+@import "collect.import.css";/*截图分享 聚合页 rem*/

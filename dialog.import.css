@@ -1,0 +1,86 @@
+.gift-dialog{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,.6);
+}
+.gift-dialog .dialog-content{
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-45%);
+}
+.gift-dialog .dialog-content .dialog-main{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.gift-dialog .dialog-content .dialog-close{
+    padding-top: 45px;
+}
+.gift-dialog .dialog-content .btn-close{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-image: url(img/slice/d-close@2x.png);
+    font-size: 0;
+}
+
+/*分享浮层*/
+.gift-dialog .share-op{
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    padding: 6px 0 8px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+.gift-dialog .share-to-txt{
+    font-size: 12px;
+    color: #5A6373;
+    line-height: 16px;
+    padding-bottom: 12px;
+}
+.gift-dialog .btn-share-item{
+    display: inline-block;
+    font-size: 0;
+    padding: 0 13px;
+    position: relative;
+}
+.gift-dialog .btn-share-item.share-animate:before{
+    content: '';
+    width: 30px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    background-size: 100% 100%;
+    background-image: url(img/slice/dt@2x.png);
+    right: 0;
+    top:0;
+}
+.gift-dialog .btn-share-item .txt{
+    display: block;
+    font-size: 12px;
+    color: #5A6373;
+    line-height: 18px;
+    padding: 4px 0;
+}
+.gift-dialog .btn-share-item .ico{
+    display: block;
+    width: 29px;
+    height: 29px;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.gift-dialog .btn-share-item.share-qq .ico{background-image: url(img/slice/qq-2@2x.png);}
+.gift-dialog .btn-share-item.share-qz .ico{background-image: url(img/slice/qz-2@2x.png);}
+.gift-dialog .btn-share-item.share-wx .ico{background-image: url(img/slice/wx-2@2x.png);}
+.gift-dialog .btn-share-item.share-py .ico{background-image: url(img/slice/py-2@2x.png);}

@@ -1,0 +1,118 @@
+
+
+/*动态图*/
+.feed-img.feed-img-dynamic{
+    padding: 0;
+}
+.feed-img.feed-img-dynamic .cover-box{
+    height: 4rem;
+    background: none;
+}
+.feed-img.feed-img-dynamic .cover-deco{
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-deco{
+    width: 95.44%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top:.37rem;
+    object-fit: cover;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-pay{
+    width: .6rem;
+    height: .6rem;
+    display: block;
+    position: absolute;
+    top:.38rem;
+    right: .38rem;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-top{
+    position: absolute;
+    top:0;
+    width: 1.74rem;
+    height: .72rem;
+    right: .73rem;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-bottom{
+    position: absolute;
+    bottom:0;
+    width: 1.12rem;
+    height: .46rem;
+    left: .15rem;
+}
+.feed-img.feed-img-dynamic .cover-img{
+    width: 3.4rem;
+    right: 0;
+}
+.feed-img.feed-img-dynamic .cover-img .img-front{
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.feed-img.feed-img-dynamic .cover-img .img-box{
+    width: 2.18rem;
+    height: 2.18rem;
+    position: absolute;
+    display: block;
+    right: .6rem;
+    top: .8rem;
+}
+.feed-img.feed-img-dynamic .cover-info{
+    top:1.09rem;
+    padding-left: .4rem;
+}
+.feed-img.feed-img-dynamic .info-txt,
+.feed-img.feed-img-dynamic .info-tips{
+    font-size: .58rem;
+    color: #fff;
+    line-height: .68rem;
+    opacity: 1;
+    padding: 0;
+    font-weight: bold;
+}
+.feed-img.feed-img-dynamic .info-date{
+    font-size: .24rem;
+    color: #fff;
+    opacity: 1;
+    font-weight: bold;
+    line-height: .44rem;
+    border-top: .02rem solid #fff;
+    display: inline-block;
+    margin-top: .2rem;
+    float: left;
+}
+.feed-img.feed-img-dynamic .info-code{
+    font-size: 0;
+    margin-top: .07rem;
+    float: left;
+    clear: both;
+}
+.feed-img.feed-img-dynamic .info-code .code-txt{
+    display: inline-block;
+    font-size: .22rem;
+    color: #fff;
+    line-height: .36rem;
+    vertical-align: middle;
+}
+.feed-img.feed-img-dynamic .info-code .code-txt span{
+    display: block;
+}
+.feed-img.feed-img-dynamic .info-code .img-replay{
+    width: .4rem;
+    height: .4rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .1rem;
+}
+.feed-img.feed-img-dynamic .info-code .img-code{
+    width: .88rem;
+    height: .88rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .2rem;
+}

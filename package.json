@@ -1,0 +1,21 @@
+{
+  "name": "my_pro",
+  "version": "1.0.0",
+  "description": "this is big pro",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xw",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-watch": "^4.3.11"
+  }
+}

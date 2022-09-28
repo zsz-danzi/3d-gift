@@ -1,0 +1,101 @@
+/*收礼动画*/
+.page-detail.hide-animate .detail-getBox .gift-img{
+    opacity: 0;
+    transform: translateY(40px);
+}
+.page-detail.hide-animate .detail-getBox .gift-box .gift-info,
+.page-detail.hide-animate .op-getBox,
+.page-detail.hide-animate .btn-send,
+.page-detail.hide-animate .detail-getBox .more-box{
+    opacity: 0;
+}
+.page-detail.hide-animate .detail-getBox{
+    transform: scale(.85);
+    opacity: 0;
+}
+.page-detail.hide-animate .bg-deco{
+    background: none;
+}
+
+/*动画时间参数*/
+@keyframes show-get-box {
+    0%{transform: scale(.85);}
+    80%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+}
+@keyframes show-img-gift {
+    0%{transform: translateY(40px);}
+    70%{transform: translateY(-5px);}
+    100%{transform: translateY(0px);}
+}
+/*礼物图*/
+.page-detail.show-animate .detail-getBox .gift-img{
+    transition: all .5s;
+    animation: show-img-gift .5s .1s both;
+}
+/*白色面板*/
+.page-detail.show-animate .detail-getBox{
+    transition: opacity .5s;
+    animation: show-get-box .5s both;
+}
+/*文字元素*/
+.page-detail.show-animate .detail-getBox .gift-box .gift-info,
+.page-detail.show-animate .op-getBox,
+.page-detail.show-animate .btn-send,
+.page-detail.show-animate .detail-getBox .more-box{
+    transition: all .4s .6s ease-out;
+}
+/*点赞*/
+@-webkit-keyframes animate-like-1 {
+    0% {background-position: 0 0;}
+    100% {background-position: -4125px 0;}/*(n-1)乘于（1倍宽度 375）*/
+}
+/*彩花*/
+.page-detail.show-animate .bg-deco{
+    -webkit-animation: animate-like-1 .8s steps(11, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+    animation: animate-like-1 .8s steps(11, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+    background-image: url(img/deco-animate@2x.png);
+    padding-top: 0;
+    height: 667px;
+    width: 375px;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*骑车小人的动画*/
+@-webkit-keyframes animate-biker {
+    0% {background-position: 0 0;}
+    100% {background-position: -1890px 0;}/*(n-1)乘于（1倍宽度 375）*/
+}
+.pop .pop-send .playing-animate .playing-main{
+    background-image: url(img/pop/play.png);
+    background-size: cover;
+    -webkit-animation: animate-biker .8s steps(9, start) 0s infinite both;/*n张图的时候，steps(n-1, start)*/
+    animation: animate-biker .8s steps(9, start) 0s infinite both;/*n张图的时候，steps(n-1, start)*/
+}
+/*小人出现*/
+.pop .pop-send .playing-animate{
+    opacity: 0;
+    transition: all .5s .3s;
+}
+.pop .show-animate .playing-animate{
+    opacity: 1;
+}
+/*文字出现*/
+.pop .pop-send .pop-send-txt{
+    opacity: 0;
+    transform:translateY(10px);
+    transition: all .5s .3s;
+}
+.pop .show-animate .pop-send-txt{
+    opacity: 1;
+    transform:translateY(0px);
+}
+/*盒子消失*/
+.pop .pop-send .box-animate{
+    transition: all .8s;
+}
+.pop .show-animate .box-animate{
+    opacity: 0;
+}

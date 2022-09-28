@@ -1,0 +1,137 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-选择包装纸</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+
+</head>
+<body class="flex-layout">
+    <div class="container">
+        <div class="page-content page-paper">
+            <div class="page-hd">
+                <!--<div class="page-box">-->
+                    <!--<div class="box-gift" id="box">-->
+                        <!--<span class="turntable" id="turntable"></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="pop-loading">
+                    <div class="loading-img"></div>
+                    <p class="loading-txt">
+                        正在加载，请稍候<span>...</span>
+                    </p>
+                </div>
+            </div>
+            <div class="page-bd">
+                <div class="paper-box">
+                    <div class="mod-module mod-scrollList">
+                        <ul>
+                            <li class="item">
+                                <div class="item-detail active">
+                                    <div class="paper-img" style="background-image:url(../img/6.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(https://qzonestyle.gtimg.cn/aoi/sola/20180718111601_gHmHEGtGjL.png)">
+
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-buy">星币支付 5<i class="ico-star"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/zepto-touch.js"></script>
+    <script src="../js/three.js"></script>
+    <script src="../js/inflate.min.js"></script>
+    <script src="../js/FBXLoader.js"></script>
+    <script src="../js/Gift.js"></script>
+    <script>
+
+        //底部装饰
+        var box = document.getElementById('box');
+        var turntable = document.getElementById('turntable');
+        var scale = box.offsetHeight < 255 ? box.offsetHeight / 255  * 1.3 :  1;
+        // turntable.style.cssText = "-webkit-transform:scale("+scale+")";
+
+        var gift = new Gift().init({
+            id : 'box',  //插入到那个ID下
+            model_url : '../models/gift-normal.fbx', //模型地址
+            img_url : '../img/gi-01.png',  //纹理地址
+            color : '#aa1a72',  //丝带色值
+            play : false , //默认flase
+            finger_move : true, //默认false
+            callback : function(){
+                // alert(1)
+            },
+        });
+
+        var color = [ '#aa1a72' , '#8f6d40' , '#0798c7' ]
+        $('.mod-scrollList ul li .paper-img').on('click',function(){
+            var index = $(this).parents('.item').index()+1;
+            console.log(index)
+            if(index >3) return;
+            gift.setTexture('../img/gi-0'+index+'.png');
+            gift.setColor(color[index-1]);
+        })
+
+    </script>    
+
+</body>
+</html>

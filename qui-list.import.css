@@ -1,0 +1,136 @@
+/*QUI list*/
+
+.qui-list{
+    margin-left: 12px;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    padding-right: 12px;
+    overflow: hidden;
+}
+.qui-list:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #ccc;
+    z-index: -1;
+    width: 200%;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    margin-left: 62px;
+}
+.qui-list .qui-list-info{
+    position: relative;
+    float: left;
+    display: table-cell;
+    width: 100%;
+    padding: 8px 0;
+}
+.qui-list .qui-list-op{
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.qui-list .qui-list-op .txt{
+    color: #777;
+    font-size: 12px;
+}
+.qui-list .nickname{
+    float: left;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+    vertical-align: top;
+    padding-right: 8px;
+}
+.qui-list .info{
+    font-size: 18px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    line-height: 21px;
+    display: inline-block;
+    width: 100%;
+}
+.qui-list .sub-info{
+    color: #777;
+    font-size: 14px;
+    display: block;
+    clear: both;
+}
+.qui-list .op-btn{
+    float: right;
+    height: .7rem;
+    line-height: .7rem;
+    text-align: center;
+    background-color: #FFDC6B;
+    color: #A64600;
+    width: 1.4rem;
+    border-radius: 6px;
+    top: 50%;
+    position: relative;
+    margin-top: -.35rem;
+    font-size: .28rem;
+}
+.qui-list .avatar{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    background-color: #fff;
+    margin-right: 12px;
+    margin: 0 12px 0 0;
+}
+.qui-list .avatar.radius{
+    border-radius: 999px;
+}
+
+/*无头像*/
+.qui-list.type-noAvatar::after{
+    margin-left: 0;
+}
+.qui-list.type-noAvatar .avatar{
+    display: none;
+}
+.qui-list.type-noAvatar .qui-list-info{
+    height: 46px;
+}
+/*多行顶部对齐*/
+.qui-list.type-multiple .qui-list-op{
+    top: 0;
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+}
+.qui-list.type-multiple .info{
+    top: -2px;
+    transform: none;
+    position: relative;
+    width: auto;
+}
+.qui-list.type-multiple .qui-list-info{
+    padding-bottom: 2px;
+}
+/*头像满屏*/
+.qui-list.type-full{
+    margin-left: 0;
+    margin-bottom: 1px;
+}
+.qui-list.type-full .qui-list-info{
+    padding: 0;
+}
+.qui-list.type-full .avatar{
+    width: 90px;
+    height: 90px;
+}
+.qui-list.type-full:after{
+    height: 1px;
+    bottom:-1px;
+}

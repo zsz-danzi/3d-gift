@@ -1,0 +1,116 @@
+
+
+/*动态图*/
+.feed-img.feed-img-dynamic{
+    padding: 0;
+}
+.feed-img.feed-img-dynamic .cover-box{
+    height: 200px;
+    background: none;
+}
+.feed-img.feed-img-dynamic .cover-deco{
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-deco{
+    width: 95.44%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top:19px;
+    object-fit: cover;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-pay{
+    width: 30px;
+    height: .30px;
+    display: block;
+    position: absolute;
+    top:19px;
+    right: 19px;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-top{
+    position: absolute;
+    top:0;
+    width: 87px;
+    height: 36px;
+    right: 36px;
+}
+.feed-img.feed-img-dynamic .cover-deco .img-bottom{
+    position: absolute;
+    bottom:0;
+    width: 56px;
+    height: 23px;
+    left: 7px;
+}
+.feed-img.feed-img-dynamic .cover-img{
+    width: 47.2%;
+    right: 0;
+    max-width: 170px;
+}
+.feed-img.feed-img-dynamic .cover-img .img-front{
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.feed-img.feed-img-dynamic .cover-img .img-box{
+    width: 64%;
+    height: auto;
+    position: absolute;
+    display: block;
+    right: 18%;
+    top: 40px;
+}
+.feed-img.feed-img-dynamic .cover-info{
+    top:55px;
+    padding-left: 5.5%;
+}
+.feed-img.feed-img-dynamic .info-txt,
+.feed-img.feed-img-dynamic .info-tips{
+    font-size: 29px;
+    color: #fff;
+    line-height: 34px;
+    opacity: 1;
+    padding: 0;
+    font-weight: bold;
+}
+.feed-img.feed-img-dynamic .info-date{
+    font-size: 12px;
+    color: #fff;
+    opacity: 1;
+    font-weight: bold;
+    line-height: 22px;
+    border-top: .02rem solid #fff;
+    display: inline-block;
+    margin-top: 10px;
+}
+.feed-img.feed-img-dynamic .info-code{
+    font-size: 0;
+    margin-top: 3px;
+}
+.feed-img.feed-img-dynamic .info-code .code-txt{
+    display: inline-block;
+    font-size: 11px;
+    color: #fff;
+    line-height: 18px;
+    vertical-align: middle;
+}
+.feed-img.feed-img-dynamic .info-code .code-txt span{
+    display: block;
+}
+.feed-img.feed-img-dynamic .info-code .img-replay{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.feed-img.feed-img-dynamic .info-code .img-code{
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}

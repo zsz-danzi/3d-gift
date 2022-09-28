@@ -1,0 +1,159 @@
+@media only screen and (max-height: 666px) {
+    /*一声问候*/
+    .page-detail .page-hd.pay-multi{
+        padding-bottom: 40px;
+    }
+}
+/*送礼*/
+@media only screen and (max-height: 600px) {
+    .page-detail .send-box{
+        padding-top: 20%;
+        padding-top: 30%;
+        /*transform: scale(.9);*/
+        transform: scale(1);
+        transform-origin: 50% 100%;
+    }
+    .page-detail .page-ft:before{
+        content: '';
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        height: 70px;
+        background-color: rgba(0,0,0,.4);
+        left: 0;
+    }
+    .show-topBar .top-bar{
+        background-color: rgba(0,0,0,.4);
+    }
+
+}
+@media only screen and (max-height: 568px) {
+    .page-detail .send-box{
+        padding-top: 15%;
+        /*padding-top: 20%;*/
+        /*padding-top: 30%;*/
+    }
+    .page-detail .info-reply{
+        padding-top: 20px;
+    }
+    .page-paper .page-box .box-gift .turntable:after{
+        top:10px;
+    }
+}
+
+/*一声问候*/
+@media only screen and (max-height: 600px) {
+    .page-detail.one-greet .sendList-box{/*一声问候*/
+        transform: scale(1);
+    }
+    .page-detail.one-greet .sendList-box .mod-scrollList{/*一声问候*/
+        /*zoom:.75;*/
+        zoom:1;
+    }
+    .page-detail.one-greet .page-ft{
+        height: 70px;
+        background-color: #F3F5F8;
+    }
+}
+
+/*收礼*/
+@media only screen and (max-height: 600px) {
+    .page-detail .get-box{
+        padding-top: 20%;
+        /*transform: scale(.9);*/
+        transform: scale(1);
+    }
+    .page-detail .op-getBox .callback-tips{
+        padding: 20px 0 20px;
+    }
+}
+@media only screen and (max-height: 568px) {
+    .page-detail .get-box{
+        /*padding-top: 15%;*/
+    }
+}
+
+/*h5头部*/
+@media only screen and (max-height: 600px) {
+    .show-topBar .page-detail{
+        margin-top: 0;
+    }
+}
+
+/*iphone6 plus以上 把收送礼和一声问候居中*/
+@media only screen and (min-height: 672px) {
+    .flex-layout.gifts-detail,
+    .flex-layout.gifts-detail #app,
+    .flex-layout.gifts-detail .container,
+    .flex-layout.gifts-detail .page-detail,
+    .flex-layout.gifts-detail .page-detail .page-hd{
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .flex-layout.gifts-detail .page-detail .send-box,
+    .flex-layout.gifts-detail .page-detail .get-box{
+        position: absolute;
+        top: 50%;
+        /*z-index: 999;*/
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .flex-layout.gifts-detail .container .page-detail.one-greet.page-content{
+        margin-top: 0;
+        padding-top: 50px;
+        box-sizing: border-box;
+    }
+    .flex-layout.gifts-detail .page-detail .page-hd .bg-deco{
+        top:50%;
+        margin-top: -60%;
+    }
+    .flex-layout.gifts-detail .page-detail.show-animate .bg-deco{
+        top:50%;
+        margin-top: -333px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .page-detail .op-getBox .callback-list{
+        transform: translateX(-50%) scale(.9);
+    }
+}
+
+
+/*iphonex*/
+@media only screen
+and (device-width : 375px)
+and (device-height : 812px)
+and (-webkit-device-pixel-ratio : 3),
+(device-width : 414px)
+and (device-height : 896px)
+and (-webkit-device-pixel-ratio : 3),
+(device-width : 414px)
+and (device-height : 896px)
+and (-webkit-device-pixel-ratio : 2){
+    /*顶部统一加20px*/
+    .page-home .page-hd{
+        margin-top: 20px;
+    }
+    .page-fixed .top-bar{
+        padding-top: 20px;
+    }
+    .show-topBar .container .page-history .page-bd{
+        padding-top: 60px;
+    }
+    .show-topBar .container .page-detail.one-greet{
+        margin-top: 50px;
+    }
+    /*底部加10*/
+    .container .page-detail .page-ft{
+        bottom:25px;
+    }
+    .preview-code .page-ft .txt{
+        padding-bottom: 30px;
+    }
+    .page-paper .page-bd{
+        padding-bottom: 40px;
+    }
+}

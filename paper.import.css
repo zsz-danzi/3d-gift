@@ -1,0 +1,332 @@
+
+/*包装列表*/
+html,.gift-wrap{
+    width: 100%;
+    height: 100%;
+}
+.page-paper .pop-loading{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gift-wrap .container{
+    width: 100%;
+    height: 100%;
+}
+.page-paper{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.page-paper .page-hd canvas{
+    position: relative;
+    z-index: 5;
+    left: 50%;
+    -webkit-transform:translateX(-50%);
+}
+.page-paper .page-hd{
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; 
+    position: relative;
+    z-index: 2;
+}
+.page-paper .page-hd .page-box{
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page-paper .page-hd .page-box .box-gift{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top:-5vw;
+}
+.page-paper .page-box .box-gift .btn-ani-01{
+    padding: 0 20px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 36px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    -webkit-transition:transform ease .2s;
+    transition:transform ease .2s;
+    z-index: 20;
+}
+.page-paper .page-box .box-gift .btn-ani-02{
+    padding: 0 20px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 36px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 56px;
+    -webkit-transition:transform ease .2s;
+    transition:transform ease .2s;
+    z-index: 20;
+}
+.page-paper .page-box .box-gift a:active{
+    -webkit-transform:scale(.9);
+}
+.page-paper .page-box .box-gift .turntable{
+    width: 48%;
+    padding-top: 24%; 
+    background-image: url(img/turntable.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    margin: 0vw auto 0;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin:50% 50%; 
+}
+.page-paper .page-box .box-gift .turntable:after{
+    content: '用手指划一划';
+    font-size: 11px;
+    width: 100px;
+    margin: 0 auto;
+    padding: 0 0 0 15px;
+    position: relative;
+    left: 7px;
+    top:20px;
+    color: rgba(0,0,0,.4);
+    text-align: center;
+    display: block;
+    background-image: url(img/finger@2x.png);
+    background-size: 19px 19px;
+    background-repeat: no-repeat;
+}
+.page-paper .page-bd{
+    padding-bottom: 15px;
+    padding-top: 12px;
+    background: #F1F5F8;
+    position: relative;
+    width: 100%;
+    bottom: 0;  
+}
+.page-paper .ani-content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding-bottom: 40%;
+    -webkit-transition:all linear .3s;
+    transition:all linear .3s; 
+}
+.page-paper .ani-content canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition:all linear .3s;
+    transition:all linear .3s; 
+}
+.page-paper .ani-box{
+    width: 100%;
+    height: 100%;
+}
+.page-paper .ani-none{
+    opacity: 0;
+}
+.page-paper .ani-none canvas{
+    pointer-events: none;
+    -webkit-transform:scale(.3);
+}
+/*.paper-box{
+    padding-bottom: 15px;
+    padding-top: 12px;
+    background: #F1F5F8;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}*/
+.page-paper .page-bd:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 8px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/Triangle@2x.png);
+    left: 50%;
+    margin-left: -11px;
+    top:-8px;
+}
+.paper-box .mod-scrollList{
+    padding-left: 2px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+.paper-box .mod-scrollList .item{
+    height: auto;
+    width: 28%;
+    margin-left: 10px;
+    overflow: hidden;
+    width: 23%;
+}
+.paper-box .paper-img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding-top: 100%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.paper-box .paper-img .paper-deco{
+    width: 24px;
+    height: 15px;
+    right:10px;
+    bottom: 10px;
+    display: block;
+    position: absolute;
+    background-size: 100% 100%;
+    background-color: #fff;
+}
+.paper-box .paper-img:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+    z-index:2;
+}
+.paper-box .paper-img:after{
+    content: '';
+    width: 22px;
+    height: 22px;
+    top:50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-image: url(img/slice/ico-chk2@2x.png);
+    display: none;
+    z-index:2;
+}
+.paper-box .active .paper-img:before,
+.paper-box .active .paper-img:after{
+    display: block;
+}
+.paper-box .paper-info{
+    text-align: center;
+    font-size: 16px;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    color: #000;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    position: relative;
+    height: auto;
+}
+.paper-box .paper-info:after{
+    content: "10";
+    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    opacity: 0;
+}
+.paper-box .paper-info .ico-star{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background-size: cover;
+    margin-left: 5px;
+    background-image: url(img/slice/star-yellow-s@2x.png);
+    position: relative;
+    top:1px;
+}
+.paper-box .paper-info .paper-name{
+    float: left;
+    font-size: 13px;
+    color: rgba(0,0,0,.4);
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*max-width: 65%;*/
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+.paper-box .paper-info .paper-price{
+    float: right;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    text-align: right;
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+/*支付按钮*/
+.paper-box .btn-buy{
+    display: block;
+    background: #F2C224;
+    border-radius: 2px;
+    width: 92%;
+    margin: -2px auto 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+}
+.paper-box .btn-buy .ico-star{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-size: cover;
+    margin-left: 5px;
+    background-image: url(img/slice/star-black@2x.png);
+    vertical-align: text-bottom;
+    position: relative;
+    top: -2px;
+}
+@media only screen and (max-height : 480px){
+    .page-paper .page-hd .page-box{
+        padding-top: 40px;
+    }
+}

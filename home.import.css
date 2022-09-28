@@ -1,0 +1,564 @@
+.page-fixed{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 9;
+}
+.page-home .page-fixed{
+    width: 100%;
+    top:0;
+    /*z-index: 2;*/
+}
+/*顶部选择了好友*/
+.page-home .friend-fixed{
+    position: relative;
+    font-size: 0;
+    height: 40px;
+    line-height: 40px;
+    z-index: 10;
+    background-color: #fff;
+}
+.page-home .friend-fixed .friend-avatar{
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    border-radius: 999px;
+    position: relative;
+    margin:0 10px 0 8px;
+    vertical-align: middle;
+}
+.page-home .friend-fixed .tips{
+    font-size: 12px;
+    color: #98A6C2;
+    vertical-align: middle;
+}
+.page-home .friend-fixed .name{
+    color: #000;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*max-width: 100px;*/
+    max-width: 70px;
+    display: inline-block;
+    vertical-align: top;
+}
+.page-home .friend-fixed .date{
+    color:#2F89E7;
+}
+.page-home .friend-fixed .date .ico-arrow{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    background-image: url(img/slice/arrow-light@2x.png);
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+.page-home .friend-fixed .btn-close-fixed{
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-size: cover;
+    right: 12px;
+    top:50%;
+    margin-top: -8px;
+    display: block;
+    position: absolute;
+    background-image: url(img/slice/home-close2@2x.png);
+}
+/*日期*/
+.page-home .date-box{
+    padding: 0 12px;
+    font-size: 30px;
+}
+.page-home .date-box .pot{
+    margin: 0 -5px;
+}
+/*好友列表*/
+.page-home .friendsList-box{
+    padding-bottom: 18px;
+    padding-top: 2px;
+}
+.page-home .friendsList-box .mod-scrollList .item{
+    height: auto;
+    width: 15%;
+}
+.page-home .friendsList-box .mod-scrollList .item.special-liked:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-image: url(img/slice/love@2x.png);
+    background-size: 100% 100%;
+    left: 50%;
+    top:30px;
+    margin-left: 8px;
+}
+.page-home .friendsList-box .friend-avatar{
+    display: block;
+    width: 40px;
+    height:40px;
+    border-radius: 999px;
+    margin: 0 auto;
+}
+.page-home .friendsList-box .friend-name{
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    line-height: 16px;
+    padding-bottom: 2px;
+    padding-top: 8px;
+}
+.page-home .friendsList-box .friend-tips{
+    text-align: center;
+    font-size: 11px;
+    line-height: 14px;
+    color: #98A6C2;
+}
+.page-home .friendsList-box .friend-tips .ico-done{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/select-mini@2x.png);
+    margin-left: 2px;
+    position: relative;
+    top:1px;
+}
+.page-home .friendsList-box .highlight{
+    color: #2F89E7;
+}
+/*礼物列表*/
+.page-content .itemList-box{
+    padding: 0 6px;
+}
+.page-content .itemList-box .mod-parallel .img-list{
+    padding: 0;
+}
+.page-content .itemList-box .mod-parallel .img-box{
+    margin-bottom: 15px;
+}
+.page-content .itemList-box .mod-parallel .img-list .img-item{
+    padding-top: 106.2%;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+}
+/*图片下下面的模糊效果*/
+.page-content .itemList-box .mod-parallel .img-list .img-item .blur-bg{/*高斯模糊影响性能，暂时先去掉了*/
+    background: none;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(.85) translate3d(0,0,0);
+    /*filter: blur(10px);*/
+    bottom: -7%;
+    border-radius: inherit;
+    display: none;
+}
+.page-content .itemList-box .mod-parallel .img-list .img-item:before{
+    background-image: inherit;
+    background-color: inherit;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(.85);
+    filter: blur(10px);
+    bottom: -7%;
+    border-radius: inherit;
+    display: none;
+}
+.page-content .itemList-box .mod-parallel .img-list .img-item:after{
+    background-image: inherit;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    border-radius: inherit;
+    display: none;
+}
+.page-content .itemList-box .info-item{
+    padding-left: 5px;
+}
+.page-content .itemList-box .info-name{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 8px 0 2px;
+}
+.page-content .itemList-box .info-detail{
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    max-width: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.page-content .itemList-box .info-img{
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    top:0;
+    left: 0;
+    transform: scale(.94);
+    transform-origin: 50% 0;
+}
+.page-content .itemList-box .info-price{
+    position: absolute;
+    /*width: 100%;*/
+    display: block;
+    bottom:3px;
+    text-align: left;
+    color: #fff;
+    z-index:2;
+    font-size: 25px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    line-height: 26px;
+}
+.page-content .itemList-box .info-price del{
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+}
+.page-content .itemList-box .info-price .ico-star{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background-size: cover;
+    margin: 0 5px 0 3px;
+    background-image: url(img/slice/star-white@2x.png);
+}
+.page-content .itemList-box .info-price del .ico-star{
+    opacity: .6;
+    transform: scale(.8);
+    vertical-align: text-bottom;
+}
+.page-content .itemList-box .info-price .ico-rmb{
+    font-size: 16px;
+    padding: 0 2px;
+}
+.page-content .itemList-box .info-price del .ico-rmb{
+    font-size: 12px;
+    padding: 0 2px;
+}
+/*标签*/
+.page-home .tag-box{
+    padding-left: 7px;
+    overflow: hidden;
+
+    padding: 0 12px;
+}
+.page-home .tag-box .tag-list{
+    margin-left: -1%;
+}
+.page-home .tag-box .tag-item{
+    float: left;
+    /*margin: 3px 5px;*/
+    margin: 0 1.2% 15px;
+    position: relative;
+    font-size: 12px;
+    z-index:1;
+    height: 25px;
+    line-height: 25px;
+    min-width: 18%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 15px;
+    padding: 0 4%;
+    border-radius: 50px;
+    background-color: #F3F5F8;
+    color: #5A6373;
+
+
+    width: 18%;
+    margin: 0 1% 15px 1%;
+    /*margin: 0;*/
+    padding: 0;
+}
+.page-home .tag-box .tag-item.border:after{
+    border-radius: inherit;
+}
+.page-home .tag-box .tag-item.active{
+    background-color: #FFBE00;
+    color: #000;
+}
+/*标题h3*/
+.page-home .title-h3{
+    padding: 18px 12px;
+    position: relative;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.page-home .title-h3 .ico-qa{
+    width: 17px;
+    height: 17px;
+    float: right;
+    background-image: url(img/slice/ico-qa@2x.png);
+    background-size: 100% 100%;
+    font-size: 0;
+    z-index: 2;
+    position: relative;
+    top: 2px;
+}
+.page-home .title-h3 .t-info{
+    float: right;
+    font-size: 12px;
+    color: #5A6373;
+    font-weight: normal;
+}
+.page-home .title-h3 .highlight{
+    color: #E9BA21;
+    font-size: 13px;
+}
+.page-home .title-h3 .ico-arrow{
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    background-size: cover;
+    margin: 0 3px 0 5px;
+    background-image: url(img/slice/ico-arrow@2x.png);
+}
+.page-home .title-h3 .t-info .ico-star{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-size: cover;
+    margin: 0 3px;
+    background-image: url(img/slice/star-yellow@2x.png);
+    vertical-align: text-bottom;
+}
+
+/*底部没有更多的提示*/
+.msg-txt{
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    display: block;
+    line-height: 30px;
+    padding-bottom: 10px;
+    color: #adadad;
+}
+
+/*没有好友生日*/
+.page-home .none-friend{
+    position: relative;
+    overflow: hidden;
+    margin-top: -15px;
+}
+.page-home .none-friend .none-tips{
+    position: absolute;
+    font-size: 13px;
+    color: #5A6373;
+    line-height: 18px;
+    padding: 0 12px;
+    top:50%;
+    transform: translateY(-50%);
+    opacity: .5;
+    width: 50%;
+}
+.page-home .none-friend .none-img{
+    display: block;
+    width: 65.333%;
+    float: right;
+}
+
+.page-content .itemList-box .mod-parallel .img-list .ico-animate-tag {
+    position: absolute;
+    width:32px ;
+    height: 16px;
+    background-image: url(img/slice/tag@2x.png);
+    background-size: 100% 100%;
+    display: block;
+    right: 7px;
+    top:10px;
+    z-index: 2;
+}
+
+.page-home .top-title {
+    font-size: 12px;
+    color: #5A6373;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    line-height: 16px;
+    padding: 10px 5px 5px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.17);
+}
+.page-home .top-title .name {
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    padding: 0 3px;
+}
+
+.page-home .mod-cover{
+    overflow: hidden;
+    margin: 13px 0 15px;
+    position: relative;
+}
+.page-home .mod-cover .cover-list{
+    width: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    transition: all .5s;
+}
+.page-home .mod-cover .cover-item{
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.page-home .mod-cover .cover-item img{
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+}
+.page-home .mod-dot{
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    bottom:0;
+    margin: 10px 0;
+}
+.page-home .mod-dot .dot{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+    border-radius: 100px;
+    margin: 0 3px;
+    opacity: .4;
+    transition: all .3s;
+}
+.page-home .mod-dot .dot.active{
+    opacity: 1;
+}
+
+/*弹幕*/
+.page-home .mod-bullet{
+    margin: 0 12px;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 50px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    position: relative;
+}
+.page-home .mod-bullet .close{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(img/slice/home-close2@2x.png);
+    background-size: 100% 100%;
+    display: block;
+    right: 7px;
+    top:50%;
+    margin-top: -8px;
+    font-size: 0;
+    z-index: 2;
+}
+.page-home .mod-bullet .bullet-list{
+    height: 100%;
+    padding: 0 10px 0 42px;
+    transition: all .5s;
+    position: relative;
+}
+.page-home .mod-bullet .bullet-item{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+.page-home .mod-bullet:before{
+    content: '';
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/sound@2x.png);
+    position: absolute;
+    top:50%;
+    margin-top: -11px;
+    left: 13px;
+}
+.page-home .mod-bullet .bullet-item .highlight {
+    color: #2F89E7;
+}
+
+/*左边角标*/
+.page-content .itemList-box .img-box .ico-flag{
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    line-height: 18px;
+    font-size: 11px;
+    color: #A64600;
+    padding: 0 2px;
+    background-image: url(img/flag/flag-c@2x.png);
+    background-size: auto 100%;
+    background-repeat: repeat;
+    left: 1px;
+    top:8px;
+    z-index: 2;
+}
+.page-content .itemList-box .img-box .ico-flag:before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url(img/flag/flag-l@2x.png);
+    top:0;
+    left: 1px;
+    transform: translateX(-100%);
+}
+.page-content .itemList-box .img-box .ico-flag:after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url(img/flag/flag-r@2x.png);
+    top:0;
+    right: 1px;
+    transform: translateX(100%);
+}

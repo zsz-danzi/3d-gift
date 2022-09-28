@@ -1,0 +1,411 @@
+.page-detail .page-fixed-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+}
+.page-detail .page-fixed{
+    z-index:99;
+}
+.page-detail{
+    position: relative;
+}
+.page-detail .page-hd .bg-deco{
+    content: '';
+    width: 100%;
+    padding-top: 111.7333%;
+    position: absolute;
+    display: block;
+    background-size: cover;
+    background-image: url(img/deco@2x.png);
+    z-index: 9;
+    pointer-events: none;
+    top:7%;
+    /*transform: translateY(-50%);*/
+    /*display: none;*/
+}
+.page-detail .page-hd{
+    overflow: hidden;
+    position: relative;
+    padding-top: 34px;
+}
+.show-topBar .page-detail .page-hd{
+    padding: 0;
+}
+.page-detail .page-ft{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    z-index: 5;
+    text-align: center;
+}
+.page-detail .ico-arrow {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    background-image: url(img/slice/arrow-light@2x.png);
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+.page-detail .btn-send{
+    width: 92%;
+    height: 40px;
+    background: #F2C224;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #000000;
+    display: block;
+    position: absolute;
+    bottom:15px;
+    left: 50%;
+    margin-left: -46%;
+}
+.page-detail .size-small{
+    display: inline-block;
+    width: 46%;
+    margin: 0 1px;
+    height: 40px;
+    background: #F2C224;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #000000;
+    position: relative;
+    bottom:15px;
+}
+.page-detail .fixed-bg{
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-size: cover;
+    position: absolute;
+    /*position: fixed;*/
+}
+/*送礼*/
+.page-detail .send-box{
+    padding-top: 34%;
+    padding-top: 15%;
+    width: 77.33333%;
+    margin: 0 auto;
+    min-width: 290px;
+    padding-bottom: 70px;
+}
+.show-topBar .page-detail .send-box{
+    padding-top: 34%;
+}
+/*送礼白色区域*/
+.page-detail .detail-sendBox{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+}
+.page-detail .detail-sendBox .avatar-box{
+    padding-left: 0;
+    top: -34px;
+    position: relative;
+    margin-bottom: -30px;
+    text-align: center;
+}
+.page-detail .detail-sendBox .avatar-box .avatar{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    border:5px solid #fff;
+    margin: 0 auto 5px;
+}
+.page-detail .detail-sendBox .avatar-box .name{
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.page-detail .detail-sendBox .avatar-box .date{
+    font-size: 13px;
+    line-height: 18px;
+    color: #2f89e7;
+}
+.page-detail .detail-sendBox .gift-img{
+    width: 51.7%;
+    width: 200px;
+    max-width: 200px;
+    margin: 0 auto -50px;
+    top:-25px;
+    display: block;
+    position: relative;
+    background-size: cover;
+}
+.page-detail .detail-sendBox .gift-img .img{
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    display: block;
+}
+.page-detail .detail-sendBox .gift-tips .img-level{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+    margin: 0 3px;
+}
+.page-detail .detail-sendBox .gift-tips{
+    text-align: center;
+    font-size: 13px;
+    color: #5A6373;
+    line-height: 18px;
+    min-height: 18px;
+}
+.page-detail .detail-sendBox .gift-tips.large{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding: 5px;
+}
+.page-detail .gift-tips .highlight{
+    color: #2f89e7;
+}
+.page-detail .detail-sendBox .gift-words{
+    line-height: 23px;
+    width: 77.586%;
+    margin: 15px auto 0;
+    border: none;
+    position: relative;
+
+    max-height: 48px;
+    overflow-y: scroll;
+}
+.page-detail .detail-sendBox .gift-words .lines{
+    opacity: 0.3;
+    height: 23px;
+    border-bottom: 1px solid #98A6C2;
+}
+.page-detail .detail-sendBox .gift-words .input-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    left: 0;
+    top:0;
+    text-align: justify;
+    line-height: 24px;
+    font-size: 13px;
+    color: #000;
+    z-index: 2;
+    outline: none;
+    white-space: normal;
+    border: none;
+}
+.page-detail .detail-sendBox .gift-words .input-box.text-indent{
+    text-indent: 60px;
+}
+.page-detail .select-box{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+}
+.page-detail .select-box .input-select{
+    font-size: 13px;
+    color: #2F89E7;
+    line-height: 23px;
+    border: none;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(https://qzonestyle.gtimg.cn/aoi/sola/20181023113138_Bw8oxNLvkd.png) no-repeat scroll right center transparent;
+    background-size: 13px 13px;
+    padding-right: 16px;
+    height: 24px;
+}
+.page-detail .detail-sendBox .more-box{
+    padding: 10px 30px;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    font-size: 11px;
+}
+.page-detail .detail-sendBox .more-box .pop-tips{
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-image: url(img/pop@2x.png);
+    width: 110px;
+    height: 50px;
+    right: 42px;
+    bottom: 42px;
+    z-index: 3;
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scale(0);
+}
+@keyframes show-pop {
+    0%{opacity: 1;}
+    13%{opacity: 1;transform: scale(1.05);}
+    15%{opacity: 1;transform: scale(1);}
+    80%{opacity: 1;transform: scale(1);}
+    100%{opacity: 0;transform: scale(1);}
+}
+.page-detail .detail-sendBox .more-box .pop-tips.show{
+    animation: show-pop 3s ease-out both;
+}
+.page-detail .detail-sendBox .more-box .btn-ask{
+    background: #FFFFFF;
+    float: left;
+    width: 78px;
+    height: 29px;
+    font-size: 12px;
+    color: #5E6776;
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    margin-top: -14px;
+}
+.page-detail .detail-sendBox .more-box .btn-ask.border:after{
+    border-radius: 50px;
+}
+.page-detail .detail-sendBox .more-box .ico-star{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    position: relative;
+    top:1px;
+    margin: 0 5px 0 1px;
+    background-image: url(img/slice/star-yellow-mini@2x.png);
+}
+.page-detail .detail-sendBox .more-box .price{
+    float: left;
+    font-size: 12px;
+    color: #5A6373;
+}
+.page-detail .detail-sendBox .more-box .ico-gift{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/gift@2x.png);
+    vertical-align: middle;
+}
+.page-detail .detail-sendBox .more-box .ico-gift-grey{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/gift-no@2x.png);
+    vertical-align: middle;
+    z-index: 3;
+    position: relative;
+}
+/*送礼底部操作区域*/
+.page-detail .op-sendBox{
+    position: relative;
+    color: #fff;
+    height: 25px;
+    line-height: 25px;
+    padding-top: 26px;
+}
+.page-detail .op-sendBox .total-price{
+    float: left;
+    font-size: 15px;
+
+    text-shadow: 0 1px 2px rgba(0,0,0,0.30);
+}
+.page-detail.one-greet .op-sendBox .total-price{
+    color: #000;
+}
+.page-detail .op-sendBox .total-price .price-del{
+    font-size: 11px;
+    color: #7F7F7F;
+    line-height: 15px;
+    padding: 0 3px;
+}
+.page-detail .op-sendBox .discount-tips{
+    font-size: 11px;
+    color: #7F7F7F;
+    line-height: 15px;
+    padding-bottom: 15px;
+}
+.page-detail .op-sendBox .ico-hui{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    background-image: url(img/slice/hui@2x.png);
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.page-detail .op-sendBox .noName-box{
+    float: right;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.30);
+}
+.one-greet .op-sendBox .total-price,
+.one-greet .op-sendBox .noName-box{
+    text-shadow: none;
+}
+.page-detail .op-sendBox .ico-star{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    position: relative;
+    top:1px;
+    margin: 0 5px 0 5px;
+    background-image: url(img/slice/star-yellow-light@2x.png);
+}
+.page-detail .op-sendBox .ico-vip{
+    display: inline-block;
+    width: 23px;
+    height: 17px;
+    background-size: 100% 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 4px 0 4px;
+    background-image: url(img/slice/ico-vip@2x.png);
+}
+.page-detail .op-sendBox .ico-svip{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: -4px 4px 0 4px;
+    background-image: url(img/slice/ico-svip@2x.png);
+}
+.page-detail .op-sendBox .ico-select{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    position: relative;
+    top:-2px;
+    vertical-align: middle;
+    margin: 0 0 0 7px;
+    background-image: url(img/slice/no-select@2x.png);
+}
+.page-detail .op-sendBox .ico-select.select{
+    background-image: url(img/slice/select@2x.png);
+}
+
+.page-detail .cor-img-l-t{display: block;position: absolute;left: 0;top:0;width: 70px;height: 70px;transform: rotate(0deg);z-index: 2;}
+.page-detail .cor-img-r-t{display: block;position: absolute;right: 0;top:0;width: 70px;height: 70px;transform: rotate(90deg);z-index: 2;}
+.page-detail .cor-img-l-b{display: block;position: absolute;left: 0;bottom:0;width: 70px;height: 70px;transform: rotate(270deg)}
+.page-detail .cor-img-r-b{display: block;position: absolute;right: 0;bottom:0;width: 70px;height: 70px;transform: rotate(180deg)}
+
+.page-detail .icon-book{
+    position: absolute;
+    right: 17px;
+    top: 22px;
+}

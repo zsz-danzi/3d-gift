@@ -1,0 +1,46 @@
+.pop-loading{
+    text-align: center;
+    margin: 0 auto;
+    top:50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/*loading动态礼物*/
+@keyframes animate-loading {
+    0% {background-position: 0 0;}
+    100% {background-position: -675px 0;}/*(n-1)乘于（1倍宽度 200）*/
+}
+@-webkit-keyframes animate-loading {
+    0% {background-position: 0 0;}
+    100% {background-position: -675px 0;}/*(n-1)乘于（1倍宽度 200）*/
+}
+.pop-loading .loading-img{/*播放时间是帧数n除于10，一秒10帧*/
+    -webkit-animation: animate-loading 1s steps(9, start) 0s infinite forwards;/*n张图的时候，steps(n-1, start)*/
+    animation: animate-loading 1s steps(9, start) 0s infinite forwards;/*n张图的时候，steps(n-1, start)*/
+    background-image: url(img/loading/box@2x.png);
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    background-size: cover;
+}
+.pop-loading .loading-txt{
+    font-size: 11px;
+    line-height: 15px;
+    color: #000000;
+    text-indent: 30px;
+}
+.pop-loading .loading-txt span{
+    display: inline-block;
+    width: 30px;
+    text-indent: -32px;
+    vertical-align: bottom;
+    overflow: hidden;
+    animation: dot 3s infinite step-start both;
+    font-family: Consolas, Monaco, monospace;
+}
+@keyframes dot {
+    33% { text-indent: -20px; }
+    66% { text-indent: -6px; }
+}

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-详情页</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../share-rem.css">
+    <script type="text/javascript">
+        // html缓存（代价是会自动多刷一次，注意：请直接访问不带参数的URL，如http://xxxxxxx.html）
+        if(!window.location.search) {
+            window.location = window.location.href+'?r='+Math.random();
+        }
+
+        // 根据屏幕大小动态改变font-size 来匹配不同屏幕下的REM
+
+        (function (win,doc){
+            if (!win.addEventListener) return;
+            var html=document.documentElement;
+            function setFont()
+            {
+                var cliWidth=html.clientWidth;
+                html.style.fontSize=100*(cliWidth/750)+'px';
+            }
+            win.addEventListener('resize',setFont,false)
+            setFont()
+        })(window,document);
+    </script>
+</head>
+<body>
+    <div class="feed-img">
+        <div class="cover-box">
+            <div class="cover-img">
+                <img src="../img/share/pic-gray.png" class="img-back" />
+                <img src="../img/share/pic-box.png" class="img-front" />
+            </div>
+            <div class="cover-info">
+                <h3 class="info-tips">今天收到</h3>
+                <h2 class="info-txt">第100份礼物</h2>
+                <h4 class="info-date">2018 08/15</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

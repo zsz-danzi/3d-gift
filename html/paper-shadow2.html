@@ -1,0 +1,303 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-选择包装纸</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+
+</head>
+<body class="flex-layout show-topBar gift-wrap" style="padding-top: 0">
+    <div class="container">
+        <div class="page-content page-paper">
+            <div class="page-fixed" style="display: none">
+                <div class="top-bar bg">
+                    <div class="top-bar-box">
+                        <button class="btn-back">返回</button>
+                        <p class="bar-title">选择包装</p>
+                        <!--<button class="btn-mine">我的</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="page-hd">
+                <div class="page-box">
+                    <div class="box-gift" id="box" style="top: 0">
+                        <span class="turntable" id="turntable"></span>
+                        <a href="javascript:;" class="btn-ani-01">礼物包装</a>
+                        <a href="javascript:;" class="btn-ani-02">礼物打开</a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-bd">
+                <div class="paper-box">
+                    <div class="mod-module mod-scrollList">
+                        <ul>
+                            <li class="item">
+                                <div class="item-detail active">
+                                    <div class="paper-img" style="background-image:url(../img/gi-01.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-02.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-03.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-04.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-05.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-06.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/gi-07.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                                <div class="item-detail">
+                                    <div class="paper-img" style="background-image:url(../img/yulan.png)">
+                                        
+                                    </div>
+                                    <p class="paper-info">110<i class="ico-star"></i></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-buy">星币支付 5<i class="ico-star"></i></button>
+                </div>
+            </div>
+            <div class="ani-content" id="ani" style="display: none">
+                <div class="ani-box" id="box2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/zepto-touch.js"></script>
+    <script src="../js/three.js"></script>
+    <script src="../js/CanvasRenderer.js"></script>
+    <script src="../js/Projector.js"></script>
+    <script src="../js/orienter.js"></script>
+    <script src="../js/inflate.min.js"></script>
+    <script src="../js/FBXLoader.js"></script>
+    <script src="../js/Gift-shadow2.js"></script>
+    <script>
+
+        //底部装饰
+        var btn_01 = $('.btn-ani-01');
+        var btn_02 = $('.btn-ani-02');
+        var ani = $('#ani');
+        var box2 = $('#box2');
+        var gift2,gift3;
+        var color = '#E4B849'; //默认颜色
+        var texture_url = '../img/gi-01.png';
+        var type = 0;
+        var first = 0;
+
+        var gift = new Gift().init({
+            id : 'box',  //插入到那个ID下
+            model_url : '../models/gift-normal.fbx', //模型地址
+            img_url : texture_url,  //纹理地址
+            color : color,  //丝带色值
+            play : false , //默认flase
+            finger_move : true, //默认false
+            type : type, // 0-默认0礼盒  1-吃鸡样式 2-其他(以后扩展)
+            loadFn : function(){
+                //模型 纹理 
+            },
+            callback : function(){
+                // alert(1)
+            },
+        });
+
+        //礼物包装
+        btn_01.on('click',function(){
+            if(this.flag) return;
+
+            if(!this.flag_index){
+                first++;
+                this.index = first;
+            }
+            this.flag_index = true;
+
+            //暂停主页静态模型的不停渲染
+            gift.action = {
+                'paused' : true
+            };
+
+            box2.children().eq(this.index-1).show();
+            this.flag = true;
+            ani[0].flag = false;
+            ani.show();
+            if(gift2){
+                gift2.play_ani();
+                gift2.animate();
+                return;
+            }
+            gift2 = new Gift().init({
+                id : 'box2',  //插入到那个ID下
+                model_url : '../models/gift-pack.fbx', //模型地址
+                img_url : texture_url,  //纹理地址
+                color : color,  //丝带色值
+                play : true , //默认flase
+                finger_move : false, //默认false
+                type : type,
+                loadFn : function(){
+                    //模型 纹理 
+                },
+                callback : function(){
+                    btn_01[0].flag = false;
+                    setTimeout(function(){
+                        ani.addClass('ani-none');
+                    },100)
+                }
+            });           
+        });
+
+        //礼物打开
+        btn_02.on('click',function(){
+            if(this.flag) return;
+
+            if(!this.flag_index){
+                first++;
+                this.index = first;
+            }
+            this.flag_index = true;
+
+            //暂停主页静态模型的不停渲染
+            gift.action = {
+                'paused' : true
+            };
+
+            box2.children().eq(this.index-1).show();
+            this.flag = true;
+            ani[0].flag = false;
+            ani.show();
+            if(gift3){
+                gift3.play_ani();
+                gift3.animate();
+                return;
+            }
+            gift3 = new Gift().init({
+                id : 'box2',  //插入到那个ID下
+                model_url : '../models/gift-open.fbx', //模型地址
+                img_url : texture_url,  //纹理地址
+                color : color,  //丝带色值
+                play : true , //默认flase
+                finger_move : false, //默认false
+                type : type,
+                loadFn : function(){
+                    //模型 纹理 
+                },
+                callback : function(){
+                    btn_02[0].flag = false;
+                    setTimeout(function(){
+                        ani.addClass('ani-none');
+                    },100)
+                }
+            });           
+        });
+
+        //页面消失
+        ani[0].addEventListener('webkitTransitionEnd',function(){
+            if(this.flag) return;
+            this.flag = true;
+            ani.hide();
+            ani.removeClass('ani-none');
+
+            box2.children("canvas:first-child").hide();
+            box2.children("canvas:last-child").hide();
+
+            //回复静态模型的不停渲染
+            gift.action = null;
+            gift.animate();
+        });
+
+
+        var color_arr = [ '#E4B849' , '#E4B849' , '#333333' ,'#F260A9' , '#F3A4AA' , '#333333' , '#F260A9' , '#F3A4AA' ];
+
+        $('.mod-scrollList ul li .paper-img').on('click',function(){
+
+            $('.mod-scrollList ul li .item-detail').removeClass('active');
+            $(this).parents('.item-detail').addClass('active');
+
+            var index1 = $(this).parents('.item').index();
+            var index2 = $(this).parents('.item-detail').index()+1;
+            var index = index1*2 + index2;
+
+            color = color_arr[index-1];
+            if(index == 8){
+                texture_url = '../img/ciji-02.jpg';
+                type = 1;
+                gift.setType(type);
+                if(gift2){
+                    gift2.setType(type);
+                }
+                if(gift3){
+                    gift3.setType(type);
+                }
+            }else{
+                texture_url = '../img/gi-0'+index+'.png';
+                type = 0;
+                gift.setType(type);
+                if(gift2){
+                    gift2.setType(type);
+                }
+                if(gift3){
+                    gift3.setType(type);        
+                }
+            }       
+
+
+            gift.setTexture(texture_url);
+            gift.setColor(color);
+
+
+            if(gift2){
+                gift2.setTexture(texture_url);
+                gift2.setColor(color);
+            }
+
+            if(gift3){
+                gift3.setTexture(texture_url);
+                gift3.setColor(color);      
+            }
+
+        })
+
+    </script>  
+</body>
+</html>

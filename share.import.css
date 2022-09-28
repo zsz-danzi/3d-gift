@@ -1,0 +1,88 @@
+.share-box{
+    width: 100%;
+    position: relative;
+}
+/*礼物图*/
+.share-box .share-img{
+    padding-top: 8px;
+    position: relative;
+    text-align: right;
+}
+.share-box .img-gift{
+    width: 41.6667%;
+    display: inline-block;
+    position: relative;
+    right: 55px;
+    z-index: 2;
+}
+.share-box .img-deco{
+    width: 54.1667%;
+    display: block;
+    z-index: 3;
+    position: absolute;
+    right: 22px;
+    top:-4px;
+}
+.share-box .img-box{
+    width: 25%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    top:58px;
+}
+.share-box .img-qrCode{
+    display: block;
+    width: 45px;
+    float: left;
+}
+
+
+.share-box .share-tips{
+    padding-left: 20px;
+    font-size: 11px;
+    color: #FFFFFF;
+    line-height: 18px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-top: -22px;
+    position: relative;
+    height: 45px;
+    min-height: 45px;
+}
+.share-box .share-tips .tips-txt{
+    float: left;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.share-box .share-tips .tips-txt span{
+    display: block;
+}
+
+.share-box .share-title{
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-left: 20px;
+    position: relative;
+    height: 59px;
+    min-height: 59px;
+}
+.share-box .share-title .nums{
+    font-size: 40px;
+    /*font-weight: bold;*/
+    padding: 0 2px;
+}
+
+.share-box .ico-pay{
+    width:69px;
+    height: 69px;
+    position: absolute;
+    display: block;
+    background-size: 100% 100%;
+    /*background-image: url(img/pay-share@2x.png);*/
+    top:15px;
+    right: 15px;
+}
+

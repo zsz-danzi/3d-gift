@@ -1,0 +1,10 @@
+/*
+ * 新版礼物商城
+ * author : colorcai
+ */
+
+@import "reset.import.css";
+@import "collect.import.css";
+body,html,.collect-box{
+    height: 100%;
+}

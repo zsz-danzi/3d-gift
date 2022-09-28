@@ -1,0 +1,137 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新版礼物商城-详情页</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,     maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="https://qzonestyle.gtimg.cn/touch/components/css/vip-icons.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+
+</head>
+<body class="flex-layout show-topBar gifts-detail">
+<style>
+    /*动态礼物*/
+    @-webkit-keyframes animate-gift {
+        0% {background-position: 0 0;}
+        100% {background-position: -3000px 0;}/*(n-1)乘于（1倍宽度 72）*/
+    }
+    .page-detail .gift-img .img{/*播放时间是帧数n除于10，一秒10帧*/
+        -webkit-animation: animate-gift 1.6s steps(15, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+        animation: animate-gift 1.6s steps(15, start) 0s 1 forwards;/*n张图的时候，steps(n-1, start)*/
+        background-image: url(../img/gift-multi@2x.png);
+    }
+</style>
+    <div class="container">
+        <div class="page-content page-detail">
+            <div class="page-fixed-bg">
+                <div class="fixed-bg" style="background-image: url(../img/bg.png)"></div>
+            </div>
+            <div class="page-fixed">
+                <div class="top-bar bg">
+                    <div class="top-bar-box">
+                        <button class="btn-back">返回</button>
+                        <p class="bar-title">礼物商城</p>
+                        <!--<button class="btn-mine">我的</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="page-hd">
+                <div class="bg-deco"></div>
+                <div class="send-box">
+                    <div class="detail-sendBox">
+                        <div class="avatar-box">
+                            <!--<img class="avatar" src="../img/100.png" />-->
+                            <img class="avatar" src="../img/add@2x.png" />
+                            <p class="name">TO:小王子</p>
+                            <p class="date">2018.01.01<i class="ico-arrow"></i></p>
+                        </div>
+                        <div class="gift-box">
+                            <!--<img class="gift-img" src="../img/gift.png" />-->
+                            <div class="gift-img"><div class="img"></div></div>
+                            <div class="gift-info">
+                                <p class="gift-tips">枕头大战</p>
+                                <p class="gift-tips">对方收到后获得<span class="highlight">7天豪华黄钻</span><i class="ico-arrow"></i></p>
+                                <div class="gift-words">
+                                    <div class="input-box" contenteditable >
+                                        <!--<textarea class="input-area">-->
+                                        愿你有自持而节制的华丽，永远虔诚的天真——生日快乐哦～
+                                        <!--</textarea>-->
+                                    </div>
+                                    <p class="lines"></p>
+                                    <p class="lines"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-box">
+                            <button class="btn-ask border">索要</button>包装 <span>5<i class="ico-star"></i></span><i class="ico-gift"></i><i class="ico-gift-grey"></i>
+                        </div>
+                    </div>
+                    <div class="op-sendBox">
+                        <span class="total-price">总价: 15<i class="ico-star"></i></span>
+                        <span class="noName-box"><i class="ico-vip"></i>匿名赠送<i class="ico-select select"></i><i class="ico-select"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-ft">
+                <button class="fixed-btn btn-send">赠送</button>
+            </div>
+        </div>
+    </div>
+    <div class="pop">
+        <div class="pop-send">
+            <div class="pop-send-bg">
+                <!--包装动画-->
+                <div class="box-animate">
+                    <div class="box-bg"></div>
+                    <div class="box-main" id="box-main">
+                        
+                    </div>
+                </div>
+                <!--小人骑车动画-->
+                <div class="playing-animate">
+                    <div class="playing-bg"></div>
+                    <div class="playing-main"></div>
+                </div>
+            </div>
+            <div class="pop-send-txt">
+                <p class="title-txt">空间快递员已收单</p>
+                <p><i class="ico-left"></i>不惧风雨，我们定将礼物准时送达<i class="ico-right"></i></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/zepto-touch.js"></script>
+    <script src="../js/three.js"></script>
+    <script src="../js/inflate.min.js"></script>
+    <script src="../js/FBXLoader.js"></script>
+    <script src="../js/Gift.js"></script>
+    <script>
+
+         var gift = new Gift().init({
+            id : 'box-main',  //插入到那个ID下
+            model_url : '../models/gift-pack.fbx', //模型地址
+            img_url : '../img/gi-03.png',  //纹理地址
+            color : '#aa1a72',  //丝带色值
+            play : true , //默认flase
+            finger_move : true, //默认false
+            callback : function(){
+                // alert(1)
+                $('.pop .pop-send').addClass('show-animate');/*播放礼盒打包的动画*/
+            },
+        });      
+
+
+        // $(function(){
+        //     window.setTimeout(function(){
+        //         $('.pop .pop-send').addClass('show-animate');/*播放礼盒打包的动画*/
+        //     },3000)
+
+        // })
+    </script>
+</body>
+</html>
